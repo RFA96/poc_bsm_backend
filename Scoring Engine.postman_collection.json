@@ -1,0 +1,622 @@
+{
+	"info": {
+		"_postman_id": "b1d31413-a6c1-4d1e-8c83-ec655db616d7",
+		"name": "Scoring Engine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API BE",
+			"item": [
+				{
+					"name": "Scoring BSM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api_key",
+								"value": "fd250d5cabfd63da01c654280a9622c4",
+								"type": "text"
+							},
+							{
+								"key": "ip_address",
+								"value": "54.169.177.194",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loan_tenor\": 60,\n\t\"interest_rate\": 20,\n\t\"loan_disbursement_amount\":105000000, \n\t\"lama_usaha_dalam_tahun\": 13,\n\t\"unggah_siup\": \"Lainnya\",\n\t\"unggah_bukti_akte\": \"Lainnya\",\n\t\"provinsi\":\"JAWA BARAT\",\n\t\"office_status\": \"Lainnya\",\n\t\"status_company\": \"Lainnya\",\n\t\"jenis_bidang_usaha\": \"Perdagangan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/scoring/BSM",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"scoring",
+								"BSM"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scoring Modal Antara",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api_key",
+								"value": "fd250d5cabfd63da01c654280a9622c4",
+								"type": "text"
+							},
+							{
+								"key": "ip_address",
+								"value": "147.139.129.212",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"tanggal_lahir\": \"1983-12-22\",\n\t\"pengambilan_kredit\": 1,\n\t\"pengalaman_kerja\": 7,\n\t\"jabatan_id\": 7,\n\t\"pendapatan\": 7000000,\n\t\"jumlah_tanggungan\": 3,\n\t\"pendidikan\": 4,\n\t\"kepemilikan\": 1,\n\t\"pinjaman\": 1000000,\n\t\"tenor_bulanan\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/scoring/Modal_Antara",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"scoring",
+								"Modal_Antara"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scoring Investree Invoicing",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "ip_address",
+								"value": "147.139.129.212",
+								"type": "text"
+							},
+							{
+								"key": "api_key",
+								"value": "fd250d5cabfd63da01c654280a9622c4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"bld_id\" : 0,\n\t\"bld_bpd_id\" : 0,\n\t\"loan_count\" : 4,\n\t\"bld_loan_tenor\" : 20,\n\t\"dpd_total\" : 0,\n\t\"loan_active\" : 1,\n\t\"mob\" : 2,\n\t\"early_loan_total\" : 2,\n\t\"mbbf_name_en\" : \"CEMENT\",\n\t\"bld_loan_disbursement_amount_sum\" : 556000000,\n\t\"bld_loan_disbursement_amount_mean\" : 115643000,\n\t\"good_loan_prop\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/scoring/Investree_Invoicing",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"scoring",
+								"Investree_Invoicing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scoring Mandala_F_Score",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api_key",
+								"value": "fd250d5cabfd63da01c654280a9622c4",
+								"type": "text"
+							},
+							{
+								"key": "ip_address",
+								"value": "147.139.129.212",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nama\":\"FIIKA\",\n\t\"jenis_kelamin\":\"P\",\n\t\"provinsi\": \"BANTEN\",\n\t\"dpkons\":5748600,\n\t\"tenor\":12,\n\t\"pengambilan_kredit_ke\":2,\n\t\"project_amount\":18672500,\n\t\"angs\":820000,\n\t\"taksasi\":8748600,\n\t\"hrgotr\":18750000,\n\t\"tgl_lahir\":\"1994-06-20\",\n\t\"pendapatan_tahunan\":48000000,\n\t\"bidang_pekerjaan\":\"WIRASWASTA\",\n\t\"jenis_fasilitas\":\"KPM\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/scoring/Mandala_F_Score",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"scoring",
+								"Mandala_F_Score"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scoring Mandala_G_Score",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api_key",
+								"value": "fd250d5cabfd63da01c654280a9622c4",
+								"type": "text"
+							},
+							{
+								"key": "ip_address",
+								"value": "147.139.129.212",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nama\":\"Ari\",\n\t\"jenis_kelamin\":\"L\",\n\t\"provinsi\":\"SULAWESI BARAT\",\n\t\"pengambilan_kredit_ke\":1,\n\t\"tgl_lahir\":\"1984-06-20\",\n\t\"pendapatan_tahunan\":36000000,\n\t\"bidang_pekerjaan\":\"BUMN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/scoring/Mandala_G_Score",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"scoring",
+								"Mandala_G_Score"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scoring BYB",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api_key",
+								"value": "fd250d5cabfd63da01c654280a9622c4",
+								"type": "text"
+							},
+							{
+								"key": "ip_address",
+								"value": "147.139.129.212",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"birthdate\" : \"1992-11-30\",\n \"gender\" : 0,\n \"marital_status\" : 1,\n \"provider\" : 2,\n \"length_of_stay_years\" : 1,\n \"monthly_income\" : 5420000,\n \"loan_amount_principal\" : 741800,\n \"loan_period_months\" : 3,\n \"goods_price\" : 741800,\n \"down_payment\" : 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/scoring/BYB",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"scoring",
+								"BYB"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scoring Indofund",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api_key",
+								"value": "fd250d5cabfd63da01c654280a9622c4",
+								"type": "text"
+							},
+							{
+								"key": "ip_address",
+								"value": "147.139.129.212",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"nama\":\"hafidh\",\n\"provinsi\":\"DKI JAKARTA\",\n\"loan_tenor\": 5,\n\"interest_rate\": 17,\n\"loan_disbursement_amount\": 1000000, \n\"jenis_bidang_usaha\": \"Jasa\",\n\"unggah_bukti_akte\": \"Ya\",\n\"unggah_siup\": \"Ya\",\n\"office_status\": \"Perdagangan \",\n\"status_company\": \"Nasional\",\n\"lama_usaha_dalam_tahun\": 100\n\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/scoring/Indofund",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"scoring",
+								"Indofund"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"username\": \"hafidh\",\r\n        \"password\": \"almarogi\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/new/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"new",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"username\": \"hafidh\",\r\n        \"password\": \"almarogi\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2505/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api_key",
+								"value": "3129dad9da5e77ed07a7be12d3cefc4f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n  \t\"username\": \"hafidh4\",\r\n    \"password\": \"almarogi\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2505/UpdateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2505",
+							"path": [
+								"UpdateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Modal Antara (payday)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tanggal_lahir\": \"1983-12-22\",\r\n\t\"pengambilan_kredit\": 1,\r\n\t\"pengalaman_kerja\": 7,\r\n\t\"jabatan_id\": 7,\r\n\t\"pendapatan\": 7000000,\r\n\t\"jumlah_tanggungan\": 3,\r\n\t\"pendidikan\": 4,\r\n\t\"kepemilikan\": 1,\r\n\t\"pinjaman\": 1000000,\r\n\t\"tenor_bulanan\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "147.139.129.212:3000/predict",
+					"host": [
+						"147",
+						"139",
+						"129",
+						"212"
+					],
+					"port": "3000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BYB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"birthdate\" : \"1992-11-30\",\r\n \"gender\" : 0,\r\n \"marital_status\" : 1,\r\n \"provider\" : 2,\r\n \"length_of_stay_years\" : 1,\r\n \"monthly_income\" : 5420000,\r\n \"loan_amount_principal\" : 741800,\r\n \"loan_period_months\" : 3,\r\n \"goods_price\" : 741800,\r\n \"down_payment\" : 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "147.139.129.212:2020/predict",
+					"host": [
+						"147",
+						"139",
+						"129",
+						"212"
+					],
+					"port": "2020",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " B-Score Investree (SME)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"bld_id\" : 0,\r\n\t\"bld_bpd_id\" : 0,\r\n\t\"loan_count\" : 4,\r\n\t\"bld_loan_tenor\" : 20,\r\n\t\"dpd_total\" : 0,\r\n\t\"loan_active\" : 1,\r\n\t\"mob\" : 2,\r\n\t\"early_loan_total\" : 2,\r\n\t\"mbbf_name_en\" : \"CEMENT\",\r\n\t\"bld_loan_disbursement_amount_sum\" : 556000000,\r\n\t\"bld_loan_disbursement_amount_mean\" : 115643000,\r\n\t\"good_loan_prop\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "147.139.129.212:2018/predict",
+					"host": [
+						"147",
+						"139",
+						"129",
+						"212"
+					],
+					"port": "2018",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mandala  (G-Score)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nama\":\"Ari\",\r\n\t\"jenis_kelamin\":\"L\",\r\n\t\"provinsi\":\"SULAWESI BARAT\",\r\n\t\"pengambilan_kredit_ke\":1,\r\n\t\"tgl_lahir\":\"1984-06-20\",\r\n\t\"pendapatan_tahunan\":36000000,\r\n\t\"bidang_pekerjaan\":\"BUMN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "147.139.129.212:2022/predict",
+					"host": [
+						"147",
+						"139",
+						"129",
+						"212"
+					],
+					"port": "2022",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mandala (F-Score)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nama\":\"FIIKA\",\r\n\t\"jenis_kelamin\":\"P\",\r\n\t\"provinsi\": \"BANTEN\",\r\n\t\"dpkons\":5748600,\r\n\t\"tenor\":12,\r\n\t\"pengambilan_kredit_ke\":2,\r\n\t\"project_amount\":18672500,\r\n\t\"angs\":820000,\r\n\t\"taksasi\":8748600,\r\n\t\"hrgotr\":18750000,\r\n\t\"tgl_lahir\":\"1994-06-20\",\r\n\t\"pendapatan_tahunan\":48000000,\r\n\t\"bidang_pekerjaan\":\"WIRASWASTA\",\r\n\t\"jenis_fasilitas\":\"KPM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "147.139.129.212:2021/predict",
+					"host": [
+						"147",
+						"139",
+						"129",
+						"212"
+					],
+					"port": "2021",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Indofund (SME)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nama\":\"hafidh\",\r\n\"provinsi\":\"DKI JAKARTA\",\r\n\"loan_tenor\": 5,\r\n\"interest_rate\": 17,\r\n\"loan_disbursement_amount\": 1000000, \r\n\"jenis_bidang_usaha\": \"Jasa\",\r\n\"unggah_bukti_akte\": \"Ya\",\r\n\"unggah_siup\": \"Ya\",\r\n\"office_status\": \"Perdagangan \",\r\n\"status_company\": \"Nasional\",\r\n\"lama_usaha_dalam_tahun\": 100\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "147.139.129.212:3492/indof",
+					"host": [
+						"147",
+						"139",
+						"129",
+						"212"
+					],
+					"port": "3492",
+					"path": [
+						"indof"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BSM (micro)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"loan_tenor\": 60,\r\n\"interest_rate\": 20,\r\n\"loan_disbursement_amount\":105000000, \r\n\"lama_usaha_dalam_tahun\": 13,\r\n\"unggah_siup\": \"Lainnya\",\r\n\"unggah_bukti_akte\": \"Lainnya\",\r\n\"provinsi\":\"JAWA BARAT\",\r\n\"office_status\": \"Lainnya\",\r\n\"status_company\": \"Lainnya\",\r\n\"jenis_bidang_usaha\": \"Perdagangan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "147.139.129.212:2016/predict",
+					"host": [
+						"147",
+						"139",
+						"129",
+						"212"
+					],
+					"port": "2016",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
